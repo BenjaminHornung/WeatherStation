@@ -1,4 +1,5 @@
 import mysql.connector
+import requests
 
 mydb = mysql.connector.connect(
   host="survivalcraft.at",
@@ -6,8 +7,6 @@ mydb = mysql.connector.connect(
   passwd="RV7p7oGApi5YocEz",
   database="WeatherStation"
 )
-
-import requests
 
 api_address='https://api.openweathermap.org/data/2.5/weather?id=7871710&appid=80a3973b72a4e1dac88160ca95b4d77d'
 json_data = requests.get(api_address).json()
